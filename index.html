@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍽️Recetas Caseras 
+    </title>
+    <!-- Agregar Bootstrap para estilos y diseño -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="navbar" class="bg-light">
+        <nav class="navbar navbar-expand-lg container">
+        
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#welcome-section">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recetas">Recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="welcome-section" class="text-center py-5">
+        <h1>🍽️Aquí las Mejores Recetas </h1>
+    </section>
+    
+ 
+    <section id="recetas">
+   
+        <div class="recetas recetas-tile">
+          <img class="recetas-image" src="https://pbs.twimg.com/media/CASvXd1VAAAbee8.jpg" alt="recetas">
+          <a href="empanadas.html"><h2 class="a-recetas" href="#">Empanadas</h2></a>
+        </div>
+          
+        <div class="recetas recetas-tile">
+          <img class="recetas-image" src="https://news.agrofystatic.com/locro_agrofy_news.jpeg?d=500x375" alt="recetas">
+          <a href="locro.html"><h2 class="a-recetas" href="#">Locro</h2></a>
+        </div>
+          
+        <div class="recetas recetas-tile">
+          <img class="recetas-image" src="https://images.hola.com/imagenes/cocina/recetas/20200908174839/noquis-salsa-tomate/0-862-504/tomate-age-m.jpg">
+          <a href="ñoquis.html"><h2 class="a-recetas" href="#">Ñoquis de papa</h2></a>
+        </div>
+        <div class="recetas recetas-tile">
+          <img class="recetas-image" src="https://www.recetasdesbieta.com/wp-content/uploads/2018/10/lasagna-original..jpg">
+          <a href="lasagna.html"><h2 class="a-recetas" href="#">Lasagna</h2></a>
+        </div>
+           
+        <div class="recetas recetas-tile">
+            <img class="recetas-image" src="https://assets.elgourmet.com/wp-content/uploads/2023/03/ramen_yJwn9cSaDIBV3tT57OordbgCLuHzP4.png"
+                    alt="Ramen"> 
+                    <a href="ramen.html"><h2 class="a-recetas" href="#">Ramen</h2></a>
+            
+        </div>
+          
+    
+      </section>
+
+      <script>
+        // JavaScript para mostrar el contenido de la receta seleccionada
+        const recipeLinks = document.querySelectorAll('.a-recetas');
+        const recetaContenedor = document.getElementById('receta-contenedor');
+    
+        recipeLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                const recipeName = link.getAttribute('data-recipe');
+                cargarReceta(recipeName);
+            });
+        });
+    
+        function cargarReceta(nombreReceta) {
+            // Realiza una solicitud AJAX para cargar el contenido de la receta seleccionada
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `${nombreReceta}.html`, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    recetaContenedor.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+    <footer class="text-center bg-dark py-3">
+        <h3>¡Cocinemos juntos!</h3>
+        <a class="footer-items" id="profile-link"  target="_blank">GitHub</a>
+        <a class="footer-items" id="profile-link"  target="_blank">LinkedIn</a>
+        <a class="footer-items" id="profile-link"  target="_blank">Instagram</a>
+    </footer>
+
+    <!-- Agregar los scripts de Bootstrap al final del cuerpo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
