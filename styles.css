@@ -1,16 +1,4 @@
-/* Estilos para pantallas más pequeñas */
-@media screen and (max-width: 600px) {
-  /* Agrega aquí los estilos específicos para pantallas más pequeñas */
-  #navbar {
-    background-color: #31064e;
-  }
-  
-  .project-tile {
-    font-size: 14px;
-  }
-  
-  /* Otros estilos específicos para pantallas más pequeñas */
-}
+
 
 * {
     margin: 0;
@@ -230,3 +218,32 @@ footer {
 +++++++=----=+=---==-----=++=-----+=---------===++++++=------=+++++++==------=+++=-----+++=----=++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+@media screen and (max-width: 990px) and (min-width: 768px), (min-width: 1200px){
+  #navbar {
+    background-color: #31064e;
+  }
+  
+  .project-tile {
+    font-size: 14vw;
+  }
+
+  .Rec {
+    font-family: Arial, sans-serif;
+    background-image: url(https://fondosmil.com/fondo/35733.jpg);
+    background-attachment: fixed; /* Fija la imagen de fondo */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+  
+}
+
