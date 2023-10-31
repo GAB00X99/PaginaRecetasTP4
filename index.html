@@ -19,6 +19,8 @@
                     <li class="nav-item"><a class="nav-link" href="#welcome-section">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link" href="#recetas">Recetas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#profile-link">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulario-receta">Envianos tu Receta</a></li>
+
                 </ul>
             </div>
         </nav>
@@ -60,6 +62,38 @@
     
       </section>
 
+      <section id="formulario-receta">
+
+        <form action="procesar_receta.php" method="POST">
+            <h1> 💌envianos tu receta🍽️ </h1>
+
+            <div class="mb-3">
+                <label for="nombre_autor" class="form-label">Nombre del Cocinero</label>
+                <input type="text" class="form-control" id="nombre_autor" name="nombre_autor" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo_autor" class="form-label">Correo del Autor</label>
+                <input type="email" class="form-control" id="correo_autor" name="correo_autor" required>
+            </div>
+            <div class="mb-3">
+                <label for="nombre_receta" class="form-label">Nombre de la receta</label>
+                <input type="text" class="form-control" id="nombre_receta" name="nombre_receta" required>
+            </div>
+            <div class="mb-3">
+                <label for="ingredientes" class="form-label">Ingredientes</label>
+                <textarea class="form-control" id="ingredientes" name="ingredientes" rows="5" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="instrucciones" class="form-label">Instrucciones</label>
+                <textarea class="form-control" id="instrucciones" name="instrucciones" rows="5" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Subir Imagen</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary" href="index.html">Enviar Receta</button>
+        </form>
+    </section>
       <script>
         // JavaScript para mostrar el contenido de la receta seleccionada
         const recipeLinks = document.querySelectorAll('.a-recetas');
@@ -86,7 +120,7 @@
     </script>
     <footer class="text-center bg-dark py-3">
         <h3>¡Cocinemos juntos!</h3>
-        <a class="footer-items" id="profile-link"  target="_blank">GitHub</a>
+        <a class="footer-items" id="https://github.com/GAB00X99/PaginaRecetasTP4"  target="_blank">GitHub</a>
         <a class="footer-items" id="profile-link"  target="_blank">LinkedIn</a>
         <a class="footer-items" id="profile-link"  target="_blank">Instagram</a>
     </footer>
